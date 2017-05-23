@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function StudentList(props) {
-  const nameEls = props.students.map( (name, i) => <li key={i}>{name}</li>)
+  const nameEls = props.students.map( (name, i) => <li key={i}><Link to={'/students/' + (i + 1) }> {name} </Link></li>)
 
   return (
       <div className='col-md-4'>
